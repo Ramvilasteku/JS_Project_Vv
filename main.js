@@ -12,7 +12,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const author=getAuth(app)
+const author = getAuth(app)
 
 
 
@@ -21,61 +21,57 @@ let signUpBtn = document.getElementById("signUpBtn");
 
 signUpBtn.addEventListener("click", (e) => {
   e.preventDefault
-// let signUpModal =document.getElementById("signUpModal")
-// console.log(signUpModal);
+  // let signUpModal =document.getElementById("signUpModal")
+  // console.log(signUpModal);
 
-let signUpModal =new bootstrap.Modal(document.getElementById("signUpModal"));
-signUpModal.show()
+  let signUpModal = new bootstrap.Modal(document.getElementById("signUpModal"));
+  signUpModal.show()
 
-let signupMbtn =document.getElementById("signupMbtn");
-signupMbtn.addEventListener('click',async()=>{
+  let signupMbtn = document.getElementById("signupMbtn");
+  signupMbtn.addEventListener('click', async () => {
 
-  let signUpName=document.getElementById('signUpName').value.trim();
-  let signUpEmail=document.getElementById('signUpEmail').value.trim();
-  let signUpPassword=document.getElementById('signUpPassword').value.trim();
-  let signUpCpassword=document.getElementById('signUpCpassword').value.trim();
+    let signUpName = document.getElementById('signUpName').value.trim();
+    let signUpEmail = document.getElementById('signUpEmail').value.trim();
+    let signUpPassword = document.getElementById('signUpPassword').value.trim();
+    let signUpCpassword = document.getElementById('signUpCpassword').value.trim();
 
-  if( signUpEmail === "" || signUpName==="" || signUpPassword === ""){
-    Swal.fire({
+    if (signUpEmail === "" || signUpName === "" || signUpPassword === "") {
+      Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "enter all fields",
-      }).then(()=>{
+      }).then(() => {
         signUpModal.show()
       })
       return;
-}
+    }
 
 
-try{
-          await createUserWithEmailAndPassword(author,signUpEmail,signUpPassword).then(()=>{
-            Swal.fire({
-                title: "registered successfully!",
-                icon: "success",
-              }).then(()=>{
-                document.getElementById("signUpName").textContent=""
-                document.getElementById("signUpEmail").textContent=""
-                document.getElementById("signUpPassword").textContent=""
-                document.getElementById("signUpCpassword").textContent=""
-                location.href="./main/home.html"
-              })
-          })
-}catch(err){
-    Swal.fire({
+    try {
+      await createUserWithEmailAndPassword(author, signUpEmail, signUpPassword).then(() => {
+        Swal.fire({
+          title: "registered successfully!",
+          icon: "success",
+        }).then(() => {
+          document.getElementById("signUpName").textContent = ""
+          document.getElementById("signUpEmail").textContent = ""
+          document.getElementById("signUpPassword").textContent = ""
+          document.getElementById("signUpCpassword").textContent = ""
+          location.href = "./main/home.html"
+        })
+      })
+    } catch (err) {
+      Swal.fire({
         icon: "error",
         title: "Oops...",
         text: err,
       })
-}
-
+    }
+  })
 
 })
 
 
-//    console.log(signUpModal)
-})
 
-
-  
 
 
