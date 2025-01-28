@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCAzIRmxl1OQ3TGOlXfxy6JPufnvDr6Okg",
@@ -71,6 +71,57 @@ signUpBtn.addEventListener("click", (e) => {
 
 })
 
+//  Login Modle functionality
+
+let loginBtn = document.getElementById('loginBtn');
+loginBtn.addEventListener("click", (e) => {
+  e.preventDefault()
+
+  let loginModal = new bootstrap.Modal(document.getElementById('loginModal'))
+  loginModal.show()
+
+  let MloginBtn = document.getElementById('MloginBtn')
+
+  MloginBtn.addEventListener("click", async() => {
+
+    let loginEmail = document.getElementById('loginEmail').value.trim();
+    let loginPassword = document.getElementById('loginPassword').value.trim();
+
+    if (loginEmail === "" || loginPassword === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "enter all fields",
+      }).then(() => {
+        loginModal.show()
+      })
+      return;
+    }
+
+    try {
+      await signInWithEmailAndPassword(author, loginEmail, loginPassword).then(() => {
+        Swal.fire({
+          title: "logged successfully!",
+          icon: "success",
+        }).then(() => {
+          document.getElementById("loginEmail").textContent = ""
+          document.getElementById("loginPassword").textContent = ""
+          location.href = "./main/Home/home.html"
+        })
+      })
+
+
+    }
+    catch (err) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: err,
+      })
+    }
+
+  })
+})
 
 
 
