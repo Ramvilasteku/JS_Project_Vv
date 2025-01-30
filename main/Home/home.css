@@ -5,8 +5,8 @@
     font-family:"Almendra", serif;
 }
 body{
-  overflow-y: scroll;
-  overflow-x: hidden;     
+  /* overflow-y: scroll; */
+  overflow-x:hidden;     
 }
 :root{
     --main-bg-color: #6096FD;
@@ -27,6 +27,7 @@ img{
     justify-content:space-between;
     align-content: center;
     padding: 5px 8px;
+    color: var(--primary-color);
 }
 
 #navbar button{
@@ -40,9 +41,9 @@ img{
 
 
 ul li a{
-    font-size: 30px;
+  color: var(--primary-color);
+    font-size: 25px;
     font-weight: 500 ;
-    color: var(--primary-color);
     text-decoration: none;
     padding: 15px;
 }
@@ -126,8 +127,100 @@ ul li a{
     color: var(--primary-color);
   }
 
+
   
 
+.home-slider .swiper-slide {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  height: 50rem;
+  width: 35rem;
+
+}
+
+.home-slider .swiper-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+  
+/* footer */
+
+.low {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(253, 248, 235, 0.897);
+height: 50vh;
+
+
+} 
+
+.low1 {
+  
+  background-color: var(--main-bg-color);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+}
+
+.foot-1 {
+  /* background-color: black; */
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+} 
+
+.foot-2 {
+  /* background-color: var(--main-bg-color); */
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+
+.foot-3 {
+  /* background-color: var(--main-bg-color); */
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.foot-4 {
+  /* background-color: var(--main-bg-color); */
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+} 
+
+ul {
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+ul a {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  font-size: small;
+  
+}  
+ 
+ul p {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  font-size: x-large;
+} 
+
+/* footer end */
   /* .logos-slide {
     white-space: nowrap;
     animation: 20s slide infinite linear;
