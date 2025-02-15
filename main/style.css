@@ -1,46 +1,337 @@
-
-  
-
-  body {
-    font-family: Arial, sans-serif; 
-    margin: 20px;
-}
-
-.carousel {
-  height: 80vh;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    height: 450px;
-    text-align: center;
-}
-.card img {
-    width: 100%;
-    height: 80%;
-}
-.card h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-.card p {
-    font-size: 0.9em;
-    color: #555;
-    margin: 0 10px 10px;
-}
-.card .price {
-    font-weight: bold;
-    color: #e63946;
-} 
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
+
+:root,
+:host {
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Almendra", serif;
+}
+
+body {
+  background-image: url(https://img.freepik.com/free-photo/background-blue-recycled-paper_1253-84.jpg?semt=ais_hybrid);
+  /* background-image:url(https://img.freepik.com/free-vector/blue-watercolor-fluid-painting-design-card1-dye-splash-style-alcohol-ink_41066-1372.jpg); */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+:root {
+  --main-bg-color: #6096fd;
+  --main-color: rgb(3, 27, 136);
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+}
+
+img {
+  width: 120px;
+  height: 40px;
+  /* padding: 2px; */
+}
+.center {
+  margin-left: 25%;
+}
+
+.end {
+  margin-left: 18%;
+}
+
+.center li a {
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 550;
+  text-decoration: none;
+  /* padding: 15px; */
+}
+
+.center li a:hover {
+  color: var(--main-color);
+  border-bottom: 5px solid var(--main-color);
+  border-bottom-right-radius: 9%;
+  border-bottom-left-radius: 9%;
+  /* padding: 0%; */
+  /* margin: 0%; */
+}
+
+.end li a {
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 15px;
+}
+
+#navDiv {
+  position: sticky;
+  top: 0%;
+  width: 100%;
+  z-index: 5;
+  /* height: 5vh; */
+}
+
+#navbar {
+  background-color: var(--main-bg-color);
+  display: flex;
+  /* justify-content:space-between; */
+  align-content: center;
+  padding: 5px 8px;
+  color: var(--primary-color);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  color: #000000;
+  position: absolute;
+  width: 50px;
+  height: 50vh;
+  z-index: 5;
+  descent-override: unset;
+}
+
+.icons {
+  display: flex;
+  gap: 20%;
+}
+
+.icons i:hover {
+  color: var(--main-color);
+  color: var(--main-color);
+  border-bottom: 5px solid var(--main-color);
+  border-bottom-right-radius: 9%;
+  border-bottom-left-radius: 9%;
+}
+
+.dropdown-menu .iconText {
+  height: 5vh;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--main-color);
+}
+#navbar button {
+  padding-top: 9px;
+  font-size: 22px;
+  font-weight: 520;
+}
+
+#landTopDiv .slide {
+  margin: 4% 21%;
+  width: 60%;
+  height: 50vh;
+}
+
+#landBottomDiv {
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 7% 10% 0 10%;
+  font-weight: 1000;
+  color: var(--main-color);
+}
+.carousel-item img {
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+}
+
+#data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3%;
+  align-items: center;
+}
+
+.card1 {
+  width: 300px;
+  margin: 2% 0;
+  height: 60vh;
+  background:transparent;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.card1:hover{
+  opacity: 1;
+
+}
+.card1 .img {
+  width: 90%;
+  height: 70%;
+  margin: 0 5%;
+  padding: 10px 0 0 0;
+  border-radius:7%;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+
+.card1 p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 10px 10px;
+}
+
+#p-icon{
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#p-icon .fa-rupee{
+  color: var(--secondary-color);
+}
+
+.card-btn:hover {
+  background-color: var(--main-bg-color);
+}
+
+
+#main-card{
+  background-color: var(--primary-color);
+  width: 90%;
+  margin-top: 0%;
+  margin: 0 5%;
+  padding-top: 0%;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+#addCart {
+  width: 20%;
+  border: none;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+#a-b-btn {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  /* margin: 0% 5%; */
+  /* border: 2px solid red; */
+}
+
+.fa-shopping-bag{
+  color: var(--primary-color);
+  font-size: 20px;
+  border-radius: 5px;
+  /* text-align: center; */
+  /* padding: 1%; */
+}
+
+.card1 button {
+  width: 100%;
+  height: 50px;
+  padding: 0% ;
+  background-color: transparent;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left:none ;
+}
+
+/* footer */
+
+.low {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(253, 248, 235, 0.897);
+  height: 50vh;
+}
+
+.low1 {
+  background-color: var(--main-bg-color);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30vh;
+}
+
+.foot-1 {
+  /* background-color: black; */
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.foot-2 {
+  /* background-color: var(--main-bg-color); */
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.foot-3 {
+  /* background-color: var(--main-bg-color); */
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.foot-4 {
+  /* background-color: var(--main-bg-color); */
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+ul {
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+ul a {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  font-size: small;
+}
+
+ul p {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  font-size: x-large;
+}
+
+/* .card1 {
+  width: 350px; 
+  height: 350px;
+  padding: 20px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 10px;
+  padding: 2px;
+}
+.card1 > button,
+.card1 > div > button {
+  padding: 10px 20px;
+}
+
+.img {
+  width: 150px;
+  height: 100px;
+}
+.cartCard1 {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */

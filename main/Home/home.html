@@ -6,290 +6,330 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VastraVilas</title>
   <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
 <body>
   <!-- Landing Page -->
-  <div id="bodyDiv">
     <div id="navDiv">
-
       <!-- Nav Links -->
       <nav class="navbar navbar-expand-lg " id="navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="../../image/Vastra Vilas Logo.png" alt=""
-              style="width:150px;height: 60px;padding: 2px "></a>
+          <a class="navbar-brand" href="#"><img src="../../image/Vastra Vilas Logo.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler"><i class="bi bi-three-dots-vertical"></i></span>
           </button>
           <div class="collapse navbar-collapse  text-bg-light" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav center">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="menBtn">
                 <a class="nav-link">MEN'S</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="womenBtn">
                 <a class="nav-link">WOMEN'S</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="kidBtn">
                 <a class="nav-link">KID'S</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="accessBtn">
                 <a class="nav-link">ACCESSORIES</a>
-                <i class="bi bi-person-circle"></i>
               </li>
             </ul>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link">profile</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">cart</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">Logout</a>
-              </li>
+            <ul class="navbar-nav end">
+              <!-- <li class="nav-item">
+                <a class="nav-link">
+                </a>
+              </li> -->
+              <div class="icons">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle"></i>
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <!-- <li><a class="iconText" href="#" >Profile</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li> -->
+                    <li><a class="iconText" href="../../index.html">Logout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"><i class="bi bi-cart2"></i></a>
+                </li>
+              </div>
             </ul>
           </div>
         </div>
-      </nav>
-      <!-- Nav Buttons -->
-      <form id="">
-        <!-- <button class="btn" id="logout" type="button">Logout</button> -->
-      </form>
       </nav>
     </div>
-    <div id="mainDiv">
-      <!-- Carousal part -->
-      <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-            aria-current="true" ariaaria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="1000">
-            <img src="../../image/men1.jpeg" class="d-block w-100" alt="...">
 
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="../../image/women1.jpeg " class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <img src="../../image/kid.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="4000">
-            <img src="../../image/accessories/brac.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div> -->
-      
-      <div class="swiper-container home-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img
-              src="https://content.jdmagicbox.com/comp/agra/e2/0562px562.x562.220923130229.e1e2/catalogue/joshi-events-destination-wedding-planner-collectorate-agra-event-organisers-sa7jyiwje8.jpg"
-              alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://content.jdmagicbox.com/comp/agra/e2/0562px562.x562.220923130229.e1e2/catalogue/joshi-events-destination-wedding-planner-collectorate-agra-event-organisers-sa7jyiwje8.jpg"
-              alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://content.jdmagicbox.com/comp/agra/e2/0562px562.x562.220923130229.e1e2/catalogue/joshi-events-destination-wedding-planner-collectorate-agra-event-organisers-sa7jyiwje8.jpg"
-              alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://content.jdmagicbox.com/comp/agra/e2/0562px562.x562.220923130229.e1e2/catalogue/joshi-events-destination-wedding-planner-collectorate-agra-event-organisers-sa7jyiwje8.jpg"
-              alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://content.jdmagicbox.com/comp/agra/e2/0562px562.x562.220923130229.e1e2/catalogue/joshi-events-destination-wedding-planner-collectorate-agra-event-organisers-sa7jyiwje8.jpg"
-              alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="https://content.jdmagicbox.com/comp/agra/e2/0562px562.x562.220923130229.e1e2/catalogue/joshi-events-destination-wedding-planner-collectorate-agra-event-organisers-sa7jyiwje8.jpg"
-              alt="" />
+
+  <div id="mainDiv">
+    <!-- Carousal part -->
+    <div id="landingDiv">
+      <div id="landTopDiv">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+              <img src="../../image/men1.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+              <img src="../../image/women1.jpeg " class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+              <img src="../../image/kid.png" class="d-block w-100 " alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+              <img src="../../image/accessories/brac.jpg" class="d-block w-100" alt="...">
+            </div>
           </div>
         </div>
       </div>
-  
-      <!-- sections for mens womens kids accessories  -->
+      <div id="landBottomDiv">
+        <p>Step into a world where tradition meets elegance. <br>Our collection of traditional wear showcases the
+          richness of cultural heritage through intricately crafted designs and timeless styles.</p>
+      </div>
+    </div>
 
-      <div>
-        <div data-aos="fade-up" data-aos-duration="9000">
-          <div class="container">
-            <div class="content">
-              <h1 class="heading">MEN'S</h1>
-              <h1>Explore traditional wear for men from across India</h1>
-              <p>Redefine tradition with our men’s collection, featuring timeless designs crafted for elegance and
-                comfort.
-                From classic kurtas to regal sherwanis, explore styles that honor heritage while embracing modern
-                sophistication. </p>
-              <div class="explore" id="menBtn">
-                <a>Explore</a>
+    <!-- sections for mens womens kids accessories  -->
+
+    <div id="sectionDiv">
+      <div data-aos="fade-up" data-aos-duration="9000">
+        <div class="container">
+          <div class="content">
+            <h1 class="heading">MEN'S</h1>
+            <h1>Explore traditional wear for men from across India</h1>
+            <p>Redefine tradition with our men’s collection, featuring timeless designs crafted for elegance and
+              comfort.
+              From classic kurtas to regal sherwanis, explore styles that honor heritage while embracing modern
+              sophistication. </p>
+            <div class="explore" id="exMenBtn">
+             <button>Explore</button>
+            </div>
+          </div>
+
+          <div class="image">
+            <img src="../../image/cover/men.jpeg" alt="img">
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="9000">
+        <div class="container">
+          <div class="content">
+            <h1 class="heading">WOMEN'S</h1>
+            <h1>Celebrate Indian heritage with our exquisite women’s collection</h1>
+            <p>Celebrate grace and elegance with our women’s collection. From intricately embroidered sarees to
+              flowing
+              anarkalis and stunning lehengas, each piece embodies timeless beauty and cultural richness. </p>
+            <div class="explore" id="exWomenBtn">
+             <button>Explore</button>
+            </div>
+          </div>
+          <div class="image">
+            <img src="../../image/cover/women.jpeg" alt="img">
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="9000">
+        <div class="container">
+          <div class="content">
+            <h1 class="heading">KID'S</h1>
+            <h1>Traditional wear for the little ones</h1>
+            <p>Let the little ones shine in our vibrant kids' collection! Combining comfort with traditional charm,
+              our
+              range of outfits is perfect for celebrations and everyday elegance.</p>
+            <div class="explore" id="exKidBtn">
+             <button>Explore</button>
+            </div>
+          </div>
+
+          <div class="image">
+            <img src="../../image/cover/kid.jpeg" alt="img">
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="9000">
+        <div class="container">
+
+          <div class="content">
+            <h1 class="heading">ACCESSORIES</h1>
+            <h1>Complement your attire with traditional accessories</h1>
+            <p>Complete your look with our exquisite range of traditional accessories. From ornate jewellry to
+              handcrafted
+              footwear and elegant handbags, every detail is designed to add the perfect finishing touch to your
+              outfit
+              and make a lasting impression.</p>
+            <div class="explore" id="exAccessBtn">
+             <button>Explore</button>
+            </div>
+          </div>
+          <div class="image">
+            <img src="../../image/cover/cover.jpg" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+
+  <!-- Review Section  -->
+  <div>
+    <h1 class="review">REVIEWS</h1>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner ">
+        <div class="carousel-item active " data-bs-interval="3000">
+          <div class="rev">
+            <div class="card" style="width: 18rem;">
+              <img src="../../image/Review/review1m (1).webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">⭐⭐⭐⭐ (4/5) <br>
+                  Ordered a men’s kurta set, and while the fabric and design were excellent, the sizing was slightly
+                  off. Had to get minor alterations done</p>
+              </div>
+
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="../../image/Review/Review1w.webp" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <p class="card-text">⭐⭐⭐⭐⭐ (5/5) <br>
+                  I recently ordered a saree from this website, and I must say, the quality is outstanding! The fabric
+                  is so soft, and the embroidery work is exquisite.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="../../image/Review/review2m.webp" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <p class="card-text">⭐⭐⭐⭐⭐ (5/5) <br>
+                  Bought a sherwani for my brother’s wedding, and it was absolutely stunning! The fit was perfect, and
+                  the detailing was on point.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="../../image/Review/Review2w.webp" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <p class="card-text">⭐⭐⭐⭐ (4/5) <br>
+                  The anarkali suit I bought was breathtaking! The craftsmanship is top-notch, but I found the prices
+                  slightly on the higher side.
+                </p>
               </div>
             </div>
 
-            <div class="image">
-              <img src="../../image/cover/men.jpeg" alt="img">
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <div class="rev">
+            <div class="card" style="width: 18rem;">
+              <img src="../../image/Review/review3w.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">⭐⭐⭐⭐ (4/5) <br>
+                  If you're looking for high-quality traditional Indian clothing, this is the site! Ordered a bridal
+                  lehenga, and it exceeded my expectations.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="../../image/Review/review3m.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">⭐⭐⭐⭐⭐ (5/5) <br>
+                  This website truly delivers authentic Indian traditional wear. The kurta set I purchased was rich in
+                  color and fabric quality.</p>
+              </div>
+
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="../../image/Review/Review4w.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">⭐⭐⭐⭐ (4/5) <br>
+                  I ordered a lehenga, and while the design and fabric were beautiful, the delivery took longer than
+                  expected. Customer support was helpful, though.</p>
+              </div>
+
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="../../image/Review/review4m.webp" class="card-img-top" alt="...">
+
+              <div class="card-body">
+                <p class="card-text">⭐⭐⭐⭐⭐ (5/5) <br>
+                  Bought a sherwani for my brother’s wedding, and it was absolutely stunning! The fit was perfect, and
+                  the detailing was on point. </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div data-aos="fade-up" data-aos-duration="9000">
-      <div class="container">
-
-        <div class="content">
-          <h1 class="heading">WOMENS'S</h1>
-          <h1>Celebrate Indian heritage with our exquisite women’s collection</h1>
-          <p>Celebrate grace and elegance with our women’s collection. From intricately embroidered sarees to
-            flowing
-            anarkalis and stunning lehengas, each piece embodies timeless beauty and cultural richness. </p>
-          <div class="explore" id="womenBtn">
-            <a>Explore</a>
-          </div>
-        </div>
-
-        <div class="image">
-          <img src="../../image/cover/women.jpeg" alt="img">
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
-  <div data-aos="fade-up" data-aos-duration="9000">
-    <div class="container">
-      <div class="content">
-        <h1 class="heading">KID'S</h1>
-        <h1>Traditional wear for the little ones</h1>
-        <p>Let the little ones shine in our vibrant kids' collection! Combining comfort with traditional charm, our
-          range of outfits is perfect for celebrations and everyday elegance.</p>
-        <div class="explore" id="kidBtn">
-          <a>Explore</a>
-        </div>
-      </div>
+  <!-- Footer section -->
 
-      <div class="image">
-        <img src="../../image/cover/kid.jpeg" alt="img">
-      </div>
+  <footer class="low1">
+    <div class="foot-1">
+      <ul>
+        <p>Stay Updated </p>
+        <!-- <a> Sign up with your email address to receive news and updates.</a> -->
+      </ul>
     </div>
-  </div>
-  </div>
-  <div data-aos="fade-up" data-aos-duration="9000">
-    <div class="container">
-
-      <div class="content">
-        <h1 class="heading">ACCESSORIES</h1>
-        <h1>Complement your attire with traditional accessories</h1>
-        <p>Complete your look with our exquisite range of traditional accessories. From ornate jewellry to
-          handcrafted
-          footwear and elegant handbags, every detail is designed to add the perfect finishing touch to your outfit
-          and make a lasting impression.</p>
-        <div class="explore" id="accessBtn">
-          <a >Explore</a>
-        </div>
-      </div>
-
-      <div class="image">
-        <img src="../../image/cover/cover.jpg" alt="img">
-      </div>
-    </div>
-
-
-    <footer class="low1">
-
-      <div class="foot-1">
-        <ul>
-          <p>Stay Updated </p>
-          <a> Sign up with your email address to receive news and updates.</a>
-        </ul>
-      </div>
-  
-      <div class="foot-2">
+    <!-- <div class="foot-2">
         <ul>
           <p> Info</p>
           <a>Home </a>
           <a> Aboutus</a>
           <a>services </a>
           <a>Gallery</a>
-  
+
         </ul>
-      </div>
-  
-      <div class="foot-3">
-        <ul>
-          <p>Follow Us</p>
-          <a> face book</a>
-          <a> instagram</a>
-          <a> twitter</a>
-  
-  
-        </ul>
-      </div>
-      <div class="foot-4">
-        <ul>
-          <p>contact Us</p>
-          <a> 46 Kim Yam Road</a>
-          <a>123456789</a>
-          <a>10kEvents123@gmail.com</a>
-        </ul>
-      </div>
-      </div>
-    </footer>
+      </div> -->
+    <div class="foot-3">
+      <ul>
+        <p>Follow Us</p>
+        <a> face book</a>
+        <a> instagram</a>
+        <a> twitter</a>
+      </ul>
+    </div>
+    <div class="foot-4">
+      <ul>
+        <p>contact Us</p>
+        <a> 46 Kim Yam Road</a>
+        <a>123456789</a>
+      </ul>
+    </div>
+  </footer>
 
-  </div>
-  </div>
-  </div>
-
-
-  <!-- Review Section  -->
-
-
-
-  </div>
-  </div>
 
 
   <script src="home.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>

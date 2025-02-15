@@ -1,54 +1,140 @@
 
 *{
-    margin: 0%;
-    padding: 0%;
-    font-family:"Almendra", serif;
+  margin: 0%;
+  padding: 0%;
+  font-family:"Almendra", serif;
 }
+/* body{
+  overflow-x:hidden; 
+} */
 body{
-  /* overflow-y: scroll; */
-  overflow-x:hidden;     
-}
+  background-image: url(https://img.freepik.com/free-photo/background-blue-recycled-paper_1253-84.jpg?semt=ais_hybrid);
+  /* background-image:url(https://img.freepik.com/free-vector/blue-watercolor-fluid-painting-design-card-dye-splash-style-alcohol-ink_41066-1372.jpg); */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 :root{
     --main-bg-color: #6096FD;
-    --main-color: #031B88;
+    --main-color:rgb(3, 27, 136) ;
     --primary-color: #ffffff;
     --secondary-color:#000000;
 }
 
 img{
-    width: 100px;
-    height: 50px;
-    padding: 2px;
+    width: 120px;
+    height: 40px;
+    /* padding: 2px; */
+}
+.center{
+  margin-left: 25%;  
+}
+
+.end{
+  margin-left: 25%;  
+}
+
+.center li a{
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 400 ;
+  text-decoration: none;
+  padding: 0px;
+}
+
+.center li a:hover{
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.end li a{
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 500 ;
+  text-decoration: none;
+  padding:2px;
+}
+
+
+
+#navDiv{
+  position: sticky;
+  top: 0%;
+  width: 100%;
+  z-index: 5;
+  /* height: 5vh; */
 }
 
 #navbar{
     background-color: var(--main-bg-color);
     display: flex;
-    justify-content:space-between;
+    /* justify-content:space-between; */
     align-content: center;
     padding: 5px 8px;
     color: var(--primary-color);
 }
 
-#navbar button{
+.navbar-toggler .navbar-toggler-icon{
+  color: #000000;
+  position: absolute;
+  width: 50px;
+  height: 50vh;
+  z-index: 5;
+  descent-override:unset;
+}
+
+.icons{
+  display: flex;
+  gap: 20%;
+}
+
+.icons i:hover{
+  color: var(--main-color);
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  /* border-bottom-right-radius:9%;
+  border-bottom-left-radius: 9%; */
+}
+
+.dropdown-menu .iconText{
+  height: 5vh;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  color: var(--main-color);
+}
+
+ #navbar button{
     padding-top: 9px;
     font-size: 22px;
     font-weight: 520;
     /* display: flex; */
-    align-items: center;
-    color: var(--primary-color) ;
-}
+    /* align-items: center; */
+    /* color: var(--primary-color) ; */
+} 
 
 
-ul li a{
-  color: var(--primary-color);
-    font-size: 25px;
-    font-weight: 500 ;
-    text-decoration: none;
-    padding: 15px;
+#landTopDiv .slide{
+  margin: 4% 21%;
+  width: 60%;
+  height: 50vh;
 }
+
+#landBottomDiv{
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+  padding:7% 10% 0 10%;
+  font-weight:600;
+  color: var(--main-color);
+
+}
+
 
 .carousel-item img{
+  border-radius: 20px;
     width: auto;
     height: auto;
 }
@@ -62,9 +148,14 @@ ul li a{
     justify-content: start;
 }
 
-#sectionMainDiv,#sectionMainDivLeft {
+#sectionDiv > .container{
+  width: 90%;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 4% 10%;
+    /* padding: 0 1%; */
 }
 
   .container {
@@ -72,18 +163,17 @@ ul li a{
     grid-template-columns: 1fr;
     gap: 20px;
     max-width: 1200px;
-    background: var(--primary-color);
-    padding: 20px;
-    border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    background:transparent;
+    padding: 3%;
+    /* border-radius: 10px;/ */
+    /* box-shadow: 1px 1px 50px 10px rgba(0, 0, 0, 0.1); */
+    
   }
 
   .image {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    /* background-color: var(--primary-color); */
-    /* height: 450px; */
 }
 
 .image img {
@@ -103,47 +193,75 @@ ul li a{
     /* font-weight: 400; */
   }
 
-  .content p {
+  .content p{
     font-size: 1rem;
     color: var(--secondary-color);
     margin-bottom: 20px;
     font-weight:lighter;
   }
 
-  .explore a {
+  .container .explore button{
     display: inline-block;
     padding: 10px 20px;
     font-size: 1rem;
-    /* width: 15%; */
-    color: var(--main-color);
+    font-weight: 800;
     border: 2px solid var(--main-color);
     border-radius: 15px;
     text-decoration: none;
     transition: all 0.3s;
+    cursor: pointer;
+    background-color: transparent;
   }
-
-  .explore a:hover {
+  
+  
+  .container  .explore button:hover{
     background-color: var(--main-color);
+    /* color: var(--main-color); */
     color: var(--primary-color);
+    
   }
 
 
   
 
-.home-slider .swiper-slide {
-  overflow: hidden;
-  border-radius: 0.5rem;
-  height: 50rem;
-  width: 35rem;
+
+
+/* Reviews */
+
+.review{
+  text-align: center;
+  color: var(--main-color);
+    font-size: 4rem ;
+    margin-top: 0%;
+
+}
+.rev{
+  margin: 5% 10%;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  /* align-content: center; */
+}
+
+.rev .card {
+  border-top-left-radius: 8%;
+  border-top-right-radius: 8%;
+  /* border-radius-top:8% ; */
+}
+.rev .card-img-top{
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+.card-text{
+  text-align: center;
+  color: var(--main-color);
 
 }
 
-.home-slider .swiper-slide img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-  
+
+
+
 /* footer */
 
 .low {
@@ -163,7 +281,7 @@ height: 50vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 50vh;
+  height: 30vh;
 }
 
 .foot-1 {
@@ -241,22 +359,10 @@ min-width: 400px;
 margin: 0 10px;
 } */
 
-@keyframes slide {
- from{
-     transform: translateX(0);
- }
-
-to {
-   transform: translateX(-100%);
-}
-}
 
 
-  /* Responsive Design */
-  @media (min-width: 768px) {
     .content .heading{
-    padding-top: 3% ;
-    /* padding-left:10% ; */
+    text-align: center;
     color: var(--main-color);
     font-size: 4rem ;
     display: flex;
@@ -265,6 +371,7 @@ to {
     .container {
       grid-template-columns: 1fr 1fr;
       align-items: center;
+      background-color: transparent;
     }
 
     
@@ -285,9 +392,7 @@ height: 50%;
     .content p {
       font-size: 0.9rem;
     }
-  }
 
-  @media (min-width: 1024px) {
     .content h1 {
       font-size: 2.5rem;
     }
@@ -299,4 +404,3 @@ height: 50%;
     .content a {
       font-size: 1.1rem;
     }
-  }
