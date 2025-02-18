@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="clearCode.css" />
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
+  <body>
+    <div id="container">
+        <table width="100%">
+            <tr >
+                <th>p_image</th>
+                <th>title</th>
+                <th>price</th>
+                <th>delete</th>
+                <th>count</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+    <h1 id="itemsCount">totalItems:---</h1>
+    <h1 id="itemsCost">totalCost:---</h1>
+    <button id="buyNow">BuyNow</button>
+    <script>
+        let buyNow=document.getElementById("buyNow");
+
+        // buyNow.addEventListener("click",()=>{
+        // })
+      let allData = document.getElementById("container");
+      document.addEventListener("DOMContentLoaded", () => {
+        let allItems = JSON.parse(localStorage.getItem("cartItems"));
+
+        let totalItems=0;
+        let totalCost=0;
+
+        allItems=allItems.map((x)=>({
+            ...x,
+            count:x.count || 1
+        }))
+        allItems.forEach((x, index) => {
+          let card = document.createElement("div");
+          card.className = "card";
+          card.classList.add("cartCard")
+          card.innerHTML = `
+             <img src=${x.image} alt="image" width="300" class="img"/>
+             <p>${x.title}</p>
+             <span>${x.price}</span>
+             <button id="remove">Remove</button>
+           <div> 
+             <button id="dec">-</button>
+             <button id="count">${x.count}</button>
+             <button id="inc">+</button></div>
+             `;
+          allData.append(card);
+          card.querySelector("#remove").addEventListener("click", () => {
+            Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  if (result.isConfirmed) {
+    allData.removeChild(card);
+              allItems.splice(index, 1);
+              localStorage.setItem("cartItems", JSON.stringify(allItems));
+              updates()
+    Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+  }
+});
+
+            // const c = confirm("are you sure to delete?");
+            // if (c) {
+            //   allData.removeChild(card);
+            //   allItems.splice(index, 1);
+            //   localStorage.setItem("cartItems", JSON.stringify(allItems));
+            //   updates()
+            // }
+          });
+          const countValue=card.querySelector("#count")
+          card.querySelector("#inc").addEventListener("click",()=>{
+                    x.count++;
+                    countValue.textContent=x.count
+                    localStorage.setItem("cartItems",JSON.stringify(allItems))
+updates()
+          })
+          card.querySelector("#dec").addEventListener("click",()=>{
+                  if(x.count >1){
+                    x.count--;
+                    countValue.textContent=x.count
+                    localStorage.setItem("cartItems",JSON.stringify(allItems))
+                  }
+                  updates()
+          })
+        });
+        // totalItems += x.count;
+        //          totalCost+=     x.count * x.price;
+
+                 function updates(){
+                    totalItems=0
+                    totalCost=0
+                    allItems.forEach(x=>{
+                        totalItems +=x.count;
+                        totalCost += x.count * x.price
+                    })
+                    document.getElementById("itemsCount").textContent=`total items:-- ${totalItems}`;
+                    document.getElementById("itemsCost").textContent=`total cost:-- ${totalCost}`;
+                 }
+                 updates()
+      });
+    </script>
+  </body>
+</html>
