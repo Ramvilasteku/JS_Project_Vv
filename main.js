@@ -123,6 +123,14 @@ loginBtn.addEventListener("click", (e) => {
   })
 })
 
+let skipBtn = document.getElementById('skipbtn')
+
+skipBtn.addEventListener('click',(e)=>{
+  e.preventDefault
+
+  location.href='./main/Home/home.html'
+})
+
 
 
 

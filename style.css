@@ -57,6 +57,13 @@
 
 
 
+#skipLogin a{
+
+text-decoration: none;
+color: var(--primary-color);
+}
+
+
 @media only screen and (max-width: 800px) {
   #navDiv .img {
     width: 100%;
