@@ -1,58 +1,133 @@
+
+
+let menBtn=document.getElementById('menBtn');
+menBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Mens/men.html";
+})
+
+let womenBtn=document.getElementById('womenBtn');
+womenBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Womens/women.html";
+})
+
+let kidBtn=document.getElementById('kidBtn');
+kidBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Kids/kid.html";
+})
+
+
+let accessBtn=document.getElementById('accessBtn');
+accessBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Accessories/access.html";
+})
+
+
+
+
+
+    
+// API calling
+
 const apiURL = 'https://api-data-ggsb.onrender.com/Mens'
 
-async function apiCall() {
+let allData = document.getElementById("data");
 
-    const dataFetch = await fetch(apiURL);
-    const dataRes = await dataFetch.json();
+let allProduct = document.getElementById('btn');
+let Footwear = document.getElementById('Footwear');
+let Jewellery = document.getElementById('Jewellery');
+let Stoles = document.getElementById('Stoles');
 
-    // dataRes.forEach(element => {
-        // let card = document.createElement("div")
-        // let btn=document.createElement("button")
-        // btn.innerHTML="add to card"
+Footwear.addEventListener("click", () => getData("Footwear"));
+Jewellery.addEventListener("click", () => getData("Jewellery"));
+Stoles.addEventListener("click", () => getData("Stoles"));
+allProduct.addEventListener("click", ()=>getData(""))
 
-        // document.body.append(card)
-        // document.body.append(btn)
 
-        const container = document.getElementById('card-container');
-            dataRes.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'card';
 
-                // Image
-                const image = document.createElement('img');
-                image.src = item.image;
-                image.alt = item.title || 'Product Image';
+async function getData(subcategory = null) {
+  const data = await fetch(apiURL);
+  const res = await data.json();
 
-                // Title
-                const title = document.createElement('h3');
-                title.textContent = item.title;
+  allData.innerHTML = "";
 
-                // Price
-                const price = document.createElement('p');
-                price.className = 'price';
-                price.textContent = `Price: ${item.price}`;
+  const filteredData = subcategory ? res.filter((x) => x.subcategory === subcategory) : res;
 
-                // Gender
-                // const gender = document.createElement('p');
-                // gender.textContent = `Gender: ${item.gender}`;
+  if (filteredData == 0) {
+    allData.innerHTML = "no data found";
+  } else {
+    filteredData.filter((x) => {
+      let card = document.createElement("div");
+      
+      card.className = "card1";
+      card.innerHTML = `
 
-                // // Category
-                // const category = document.createElement('p');
-                // category.textContent = `Category: ${item.category}`;
+             <img src=${x.image} alt="image" width="300" class="img"/>
+             <div id='main-card'>
+             <p>${x.title}</p>
+             <span id='p-icon'>
+             <i class="fa fa-rupee"></i>
+             ${x.price}
+             </span>
+             <div id='a-b-btn'>
+             <button id="buyNow">BuyNow</button>
+             <button id="addCart"><i class="fa fa-shopping-bag"></i></button>
+             </span>
+             </div>
+             `;
+      allData.append(card);
 
-                // // Description
-                // const description = document.createElement('p');
-                // description.textContent = item.description;
+      card.addEventListener("click", () => {
+        location.href = "../../main/Product/singlepage.html";
+        localStorage.setItem("singleP", JSON.stringify(x));
+      });
+      card.querySelector("#addCart").addEventListener("click", (e) => {
+        e.stopPropagation();
+        // Swal.fire('Good job!', 'item added to the cart!', 'success');
+        Swal.fire({
+          title: `${x.title}`,
+          text: `${x.price}`,
+          imageUrl: `${x.image}`,
+          imageWidth: 200,
+          imageHeight: 200,
+          imageAlt: ""
+        });
 
-                // // Append elements to the card
-                card.appendChild(image);
-                card.appendChild(title);
-                card.appendChild(price);
-                // card.appendChild(gender);
-                // card.appendChild(category);
-                // card.appendChild(description);
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        cartItems.push(x);
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      });
+      card.querySelector("#buyNow").addEventListener("click", (e) => {
+        e.stopPropagation();
+        let timerInterval;
+        Swal.fire({
+          title: "Redirecting to cart page",
+          html: "I will navigate in <b></b> milliseconds.",
+          timer: 1000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+            const timer = Swal.getPopup().querySelector("b");
+            timerInterval = setInterval(() => {
+              timer.textContent = `${Swal.getTimerLeft()}`;
+            }, 100);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log("I was closed by the timer");
+            location.href = "../../main/Product/cartpage.html"
+          }
+        });
 
-                // Append the card to the container
-                container.appendChild(card);
-            });
-        
+      });
+    });
+  }
+}
+getData();

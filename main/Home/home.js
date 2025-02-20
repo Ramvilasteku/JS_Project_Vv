@@ -20,33 +20,20 @@
 
 
 
-let menBtn=document.getElementById('menBtn');
-menBtn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    window.location.href=".././Mens/men.html";
-})
 let exnBtn=document.getElementById('exMenBtn');
 exMenBtn.addEventListener('click',(e)=>{
     e.preventDefault()
     window.location.href=".././Mens/men.html";
 })
 
-let womenBtn=document.getElementById('womenBtn');
-womenBtn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    window.location.href=".././Womens/women.html";
-})
+
 let exWomenBtn=document.getElementById('exWomenBtn');
 exWomenBtn.addEventListener('click',(e)=>{
     e.preventDefault()
     window.location.href=".././Womens/women.html";
 })
 
-let kidBtn=document.getElementById('kidBtn');
-kidBtn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    window.location.href=".././Kids/kid.html";
-})
+
 
 let exKidBtn=document.getElementById('exKidBtn');
 exKidBtn.addEventListener('click',(e)=>{
@@ -54,11 +41,7 @@ exKidBtn.addEventListener('click',(e)=>{
     window.location.href=".././Kids/kid.html";
 })
 
-let accessBtn=document.getElementById('accessBtn');
-accessBtn.addEventListener('click',(e)=>{
-    e.preventDefault()
-    window.location.href=".././Accessories/access.html";
-})
+
 
 let exAccessBtn=document.getElementById('exAccessBtn');
 exAccessBtn.addEventListener('click',(e)=>{

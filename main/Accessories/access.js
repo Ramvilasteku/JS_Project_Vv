@@ -1,3 +1,32 @@
+
+let menBtn=document.getElementById('menBtn');
+menBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Mens/men.html";
+})
+
+let womenBtn=document.getElementById('womenBtn');
+womenBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Womens/women.html";
+})
+
+let kidBtn=document.getElementById('kidBtn');
+kidBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Kids/kid.html";
+})
+
+
+let accessBtn=document.getElementById('accessBtn');
+accessBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Accessories/access.html";
+})
+
+
+
+
 // API calling
 
 const apiURL = 'https://api-data-ggsb.onrender.com/Accessories'
@@ -41,7 +70,7 @@ async function getData(subcategory = null) {
              ${x.price}
              </span>
              <div id='a-b-btn'>
-             <button id="buyNow">BuyNow</button>
+             <button id="buyNow">Buy Now</button>
              <button id="addCart"><i class="fa fa-shopping-bag"></i></button>
              </span>
              </div>
@@ -68,34 +97,9 @@ async function getData(subcategory = null) {
         cartItems.push(x);
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
       });
-      card.querySelector("#buyNow").addEventListener("click", (e) => {
-        e.stopPropagation();
-        let timerInterval;
-        Swal.fire({
-          title: "Redirecting to cart page",
-          html: "I will navigate in <b></b> milliseconds.",
-          timer: 1000,
-          timerProgressBar: true,
-          didOpen: () => {
-            Swal.showLoading();
-            const timer = Swal.getPopup().querySelector("b");
-            timerInterval = setInterval(() => {
-              timer.textContent = `${Swal.getTimerLeft()}`;
-            }, 100);
-          },
-          willClose: () => {
-            clearInterval(timerInterval);
-          }
-        }).then((result) => {
-          /* Read more about handling dismissals below */
-          if (result.dismiss === Swal.DismissReason.timer) {
-            console.log("I was closed by the timer");
-            location.href = "../../main/Product/cartpage.html"
-          }
-        });
-
-      });
     });
   }
+  
 }
 getData();
+

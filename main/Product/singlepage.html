@@ -46,10 +46,7 @@
             </li>
           </ul>
           <ul class="navbar-nav end">
-            <!-- <li class="nav-item">
-                <a class="nav-link">
-                </a>
-              </li> -->
+
             <div class="icons">
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,34 +71,7 @@
     </nav>
   </div>
 
-
-
-  <script>
-    let singleP = JSON.parse(localStorage.getItem("singleP"));
-    let card = document.createElement("div");
-    card.className="singleCardDiv"
-    card.innerHTML = `
-
-  
- <img src=${singleP.image} alt="image" width="300" class="img"/>
- <div id='singleCardData'>
-
-             <p id='singleTitle'>${singleP.title}</p>
-             <p id='singleDes'>${singleP.description}</p>
-             <span id='singleRuppe'>
-             <i class="fa fa-rupee"></i>
-              ${singleP.price}
-              
-             </span>
-             <div id='add-Buy-Btn'>
-               <button id="singleBuyNow">Buy Now</button>
-               <button id="singleAddCart">Add To Cart</button>
- </div>
-
-
-`;
-    document.body.append(card);
-  </script>
+<script src="./singlepage.js"></script>
 </body>
 
 </html>
