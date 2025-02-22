@@ -57,23 +57,22 @@ async function getData(subcategory = null) {
     allData.innerHTML = "no data found";
   } else {
     filteredData.filter((x) => {
-      let card = document.createElement("div");
+      let card= document.createElement("div");
       
       card.className = "card1";
       card.innerHTML = `
-
              <img src=${x.image} alt="image" width="300" class="img"/>
              <div id='main-card'>
              <p>${x.title}</p>
-             <span id='p-icon'>
+             <div id='p-icon'>
              <i class="fa fa-rupee"></i>
              ${x.price}
-             </span>
-             <div id='a-b-btn'>
-             <button id="buyNow">Buy Now</button>
-             <button id="addCart"><i class="fa fa-shopping-bag"></i></button>
-             </span>
              </div>
+             <div id='a-b-btn'>
+             <button id="buyNow" >Buy Now</button>
+             <button id="addCart"><i class="fa fa-shopping-bag"></i></button>
+             </div>
+
              `;
       allData.append(card);
 

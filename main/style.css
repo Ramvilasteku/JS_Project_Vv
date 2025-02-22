@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+
 :root,
 :host {
   --fa-style-family-classic: "Font Awesome 6 Free";
@@ -134,34 +135,43 @@ border-bottom-left-radius: 9%; */
   height: auto;
 }
 
+
+/* Card Items  */
+
 #data {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3%;
   align-items: center;
+  gap: 3%;
+  padding: 1%;
 }
 
 .card1 {
   width: 300px;
-  margin: 2% 0;
+  margin: 2% 0%;
   height: 65vh;
   background: transparent;
-  border-radius: 6%;
-  /* opacity: 1; */
-  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
-
-  /* box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1); */
+  border-radius: 20px;
+  text-align: center;
+  
 }
 
-.card1 .img:hover {
-  opacity: 0.6;
-  transition: opacity 0.3s ease-in-out;
+.card1:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s ease-out;
+  background: transparent;
+  
+  color: var(--main-color);
+  border-radius: 20px;
+  transform: scale(1.02);
+  box-shadow: 0 0 5px var(--main-color), 0 0 10px var(--main-bg-color),
+    0 0 15px var(--main-color);
 }
 
 .card1 .img {
   width: 100%;
-  height: 70%;
+  height: 64%;
   border-radius: 7%;
   border-bottom-left-radius: 0%;
   border-bottom-right-radius: 0%;
@@ -170,23 +180,18 @@ border-bottom-left-radius: 9%; */
 #main-card {
   background-color: var(--primary-color);
   width: 100%;
-  margin-top: 0%;
-  padding-top: 0%;
-  border-bottom-left-radius: 9px;
-  border-bottom-right-radius: 9px;
+  height: 36%;
+  padding: 1%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
-/* #main-card,p:hover{
-  background-color: var(--main-bg-color);
-  color:white;
-} */
+
 
 .card1 p {
   font-size: 1.1rem;
   color: var(--main-color);
-  /* padding: 0px 0px 0px; */
-  margin-left: 5%;
-  padding-top: 5%;
+  padding-top: 3%;
   font-weight: 600;
 }
 
@@ -194,7 +199,7 @@ border-bottom-left-radius: 9%; */
   font-size: 1.3rem;
   font-weight: 900;
   font-family: "Times New Roman", Times, serif;
-  margin: 0 5%;
+  /* margin: 0 5%; */
 }
 
 #p-icon .fa-rupee {
@@ -202,7 +207,7 @@ border-bottom-left-radius: 9%; */
   color: rgba(50, 205, 50, 0.845);
 }
 
-.card-btn:hover {
+.card-btn:hover { 
   background-color: var(--main-bg-color);
 }
 
@@ -246,7 +251,15 @@ border-bottom-left-radius: 9%; */
   color: var(--primary-color);
   background-color: var(--main-color);
   border-right: 2px solid var(--primary-color);
+  
 }
+
+[transition-style="in:square:hesitate"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-hesitate both;
+}
+
+
+/* Card Items END */
 
 /* footer */
 
@@ -309,7 +322,7 @@ border: 3px double var(--main-color);
 }
 
 .license {
-  height: 6vh;
+  color: var(--primary-color);
   background-color: var(--main-bg-color);
   border-top: 3px double var(--primary-color);
   text-align: center;
@@ -402,52 +415,64 @@ border: 3px double var(--main-color);
   border-right: 2px solid var(--primary-color);
 }
 
-/* Cart Page */
+ @keyframes polygon-in-opposing-corners {
+    from {
+      clip-path: polygon(0 0, 50% 50%, 100% 100%, 50% 50%);
+    }
+    to {
+      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    }
+  }
+  
+  [transition-style="in:polygon:opposing-corners"] {
+    animation: 6.5s cubic-bezier(.25, 0.6, .30, 1) polygon-in-opposing-corners both;
+  }
 
+/* Cart Page */
+/* 
 #cartMainDiv {
   display: flex;
-}
-#container{
+  justify-content: ;
+} */
 
-  background-color:transparent;
-}
 
 #container table {
-  border-bottom: 2px solid var(--main-color);
-  margin: 1% 0.1%;
-  padding: 1%;
+  border: 2px solid var(--main-color);
+  margin: 0.1% 5%;
+  width: 90%;
   
 }
 
-#container th {
-  padding: 0%;
-  width: 10%;
+#container tr th {
+  padding: 2%;
+  width: 15%;
   background-color:transparent;
 }
 
 #container .img {
   width: 50%;
-  height: 18vh;
+  height: 20vh;
   padding: 2%;
 }
 
 #container table p {
   margin: 0%;
-  /* text-align: center; */
-  padding: 0%;
+  text-align: center;
+  /* padding: 0%; */
   width: 100%;
 }
 
 
 #cartRuppe {
   font-family: "Times New Roman", Times, serif;
+  text-align: center;
   font-size: 1.7rem;
   font-weight: 900;
   margin: 0 5%;
 }
 
 #remove{
-  width:30%;
+  width:40%;
   height: 30px;
   font-size: 1.3em;
   color: var(--secondary-color);
@@ -469,7 +494,7 @@ border: 3px double var(--main-color);
 }
 
 #add-remove-btn button{
-  opacity: 0.5;
+  opacity: 0.8;
   width: 20%;
   height: 25px;
   text-align: center;
@@ -483,6 +508,36 @@ border: 3px double var(--main-color);
   opacity: 1;
  }
 
+ .cartPageTotal{
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid var(--main-color);
+  width: 90%;
+  margin: 1%5% ;
+  padding: 1%;
+ }
+
+ .cartPageTotal h1{
+  text-transform: capitalize;
+  font-family: 'Times New Roman';
+ }
+
+  .cartPageTotal button{
+
+  background-color: transparent;
+  width: 10%;
+  border-radius: 15px;
+
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: x-large;
+  font-weight: 550;
+ }
+ .cartPageTotal button:hover{
+   color: var(--primary-color);
+}
+
+ 
 
 
 
@@ -568,4 +623,20 @@ label {
 .checkbtn:hover {
   color: var(--primary-color);
   background: var(--main-color);
+}
+
+@keyframes diamond-in-hesitate {
+  0% {
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  }
+  50% {
+    clip-path: polygon(45% 50%, 50% 25%, 55% 50%, 50% 75%);
+  }
+  100% {
+    clip-path: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);
+  }
+}
+
+[transition-style="in:diamond:hesitate"] {
+  animation: 1s cubic-bezier(.25, 1, .30, 1) diamond-in-hesitate both;
 }

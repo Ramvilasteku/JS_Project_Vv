@@ -1,8 +1,37 @@
+
+let menBtn=document.getElementById('menBtn');
+menBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Mens/men.html";
+})
+
+let womenBtn=document.getElementById('womenBtn');
+womenBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Womens/women.html";
+})
+
+let kidBtn=document.getElementById('kidBtn');
+kidBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Kids/kid.html";
+})
+
+
+let accessBtn=document.getElementById('accessBtn');
+accessBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    window.location.href=".././Accessories/access.html";
+})
+
+
+
+
 let buyNow = document.getElementById("buyNow");
 
 buyNow.addEventListener("click", (e) => {
   e.preventDefault();
-  location.href = "../../main/CheckOut/checkout.html";
+  location.href = "../../main/CheckOut/checkoutCart.html";
 });
 let allData = document.getElementById("container");
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }));
   allItems.forEach((x, index) => {
     let card = document.createElement("div");
-    card.className = "card";
+    // card.className = "card";
     card.classList.add("cartCard");
     card.innerHTML = `
   <div id="container">
@@ -98,10 +127,10 @@ document.addEventListener("DOMContentLoaded", () => {
       totalCost += x.count * x.price;
     });
     document.getElementById(
-      "itemsCount"
+      "proCount"
     ).textContent = `total items:-- ${totalItems}`;
     document.getElementById(
-      "itemsCost"
+      "proCost"
     ).textContent = `total cost:-- ${totalCost}`;
   }
   updates();

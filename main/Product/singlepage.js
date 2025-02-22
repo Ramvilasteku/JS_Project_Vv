@@ -25,13 +25,14 @@ accessBtn.addEventListener('click',(e)=>{
 })
 
 
+let singleCard = document.getElementById('singlecard')
+
 
 
 let singleP = JSON.parse(localStorage.getItem("singleP"));
 let card1 = document.createElement("div");
 card1.className = "singleCardDiv"
 card1.innerHTML = `
-
 
 <img src=${singleP.image} alt="image" width="300" class="img"/>
 <div id='singleCardData'>
@@ -44,9 +45,9 @@ card1.innerHTML = `
           </span>
           <div id='add-Buy-Btn'>
           <button id="singleBuyNow">Buy Now</button>
-</div>
+</div>  
 `;
-document.body.append(card1);
+singleCard.append(card1);
 
 card1.querySelector("#singleBuyNow").addEventListener("click", (e) => {
   e.stopPropagation();

@@ -416,6 +416,7 @@ img {
 
 .license {
   /* height: 6vh; */
+  color: var(--primary-color);
   background-color: var(--main-bg-color);
   border-top: 3px double var(--primary-color);
   text-align: center;
