@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
             Swal.fire({
                 icon: "error",
                 title: "Please fill in all required fields!",
-              });            
-              return;
+            });
+            return;
         }
 
         // If credit card payment is selected, validate card details
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 Swal.fire({
                     icon: "error",
                     title: "Invalid card number. Must be 16 digits!",
-                  });
+                });
                 return;
             }
             if (cvv.length !== 3 || isNaN(cvv)) {
@@ -65,28 +65,43 @@ document.addEventListener("DOMContentLoaded", function () {
                 Swal.fire({
                     icon: "error",
                     title: "Invalid CVV. Must be 3 digits!",
-                  });
+                });
                 return;
             }
             Swal.fire({
-                position: "center",
-                icon: "success",
                 title: "Order placed successfully with Credit Card!",
-                showConfirmButton: false,
-                timer: 2000
-              });
+                icon: "success",
+                confirmButtonText: "Back to Home",
+                showButton: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = "../main/Home/home.html"
+
+                }
+            })
+            // Swal.fire({
+            //     position: "center",
+            //     icon: "success",
+            //     showConfirmButton: false,
+            //     timer: 2000
+            //   });
         } else {
             Swal.fire({
-                position: "center",
-                icon: "success",
                 title: "Order placed successfully with Cash on Delivery!",
-                showConfirmButton: false,
-                timer: 2000
-              });
+                confirmButtonText: "Back to Home",
+                showButton: true,
+                icon: "success",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = "../main/Home/home.html"
+
+                }
+            })
+
         }
     });
 
-    
+
     let singleP = JSON.parse(localStorage.getItem("singleP"));
     let card1 = document.getElementById("chechOutAmt");
     card1.className = "chechOutAmt"
