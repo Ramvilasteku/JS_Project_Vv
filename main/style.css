@@ -242,7 +242,7 @@ border-bottom-left-radius: 9%; */
   color: var(--main-color);
 }
 
-#buyNow :hover {
+#buyNow:hover {
   color: var(--primary-color);
   background-color: var(--main-color);
   border-right: 2px solid var(--primary-color);
@@ -254,25 +254,29 @@ border-bottom-left-radius: 9%; */
 .help {
   /* height: 45vh; */
   background-color: var(--main-bg-color);
+  margin-top: 5%;
+  padding: 1%;
 }
 
 .social {
   display: flex;
   justify-content: center;
-  padding: 3%;
+  padding: 1%;
 }
 .social .bx {
-  font-size: 300%;
+  font-size: 250%;
   padding: 0.5%;
-  margin: 0.5%;
-  background-color: var(--primary-color);
+  margin: 0.3%;
   border-radius: 50%;
-  color: var(--color);
+  /* background-color: var(--main-color); */
+  border: 3px double var(--primary-color);
+  color: var(--primary-color);
   cursor: pointer;
 }
 
 .social .bx:hover {
-  background-color: var(--main-color);
+color: var(--main-color);
+border: 3px double var(--main-color);
 }
 
 .helpc {
@@ -282,7 +286,7 @@ border-bottom-left-radius: 9%; */
 }
 
 .helpc .cell {
-  font-size: 100%;
+  font-size: 150%;
   color: var(--primary-color);
 }
 
@@ -291,9 +295,12 @@ border-bottom-left-radius: 9%; */
 }
 
 .helpc .bx {
-  font-size: 200%;
+  font-size: 199%;
+  padding: 0%;
+  margin:0%;
   color: var(--primary-color);
 }
+
 
 .help input {
   width: 40%;
@@ -307,74 +314,6 @@ border-bottom-left-radius: 9%; */
   border-top: 3px double var(--primary-color);
   text-align: center;
   padding: 0.5%;
-}
-
-.low {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(253, 248, 235, 0.897);
-  height: 50vh;
-}
-
-.low1 {
-  background-color: var(--main-bg-color);
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 30vh;
-}
-
-.foot-1 {
-  /* background-color: black; */
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.foot-2 {
-  /* background-color: var(--main-bg-color); */
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.foot-3 {
-  /* background-color: var(--main-bg-color); */
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.foot-4 {
-  /* background-color: var(--main-bg-color); */
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-ul {
-  margin-top: 30px;
-  font-weight: 700;
-}
-
-ul a {
-  display: block;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  font-size: small;
-}
-
-ul p {
-  display: block;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  font-size: x-large;
 }
 
 /* single Product page CSS */
@@ -428,7 +367,7 @@ ul p {
   margin: 0 5%;
 }
 
-.singleCardDiv .fa-rupee {
+.fa-rupee {
   font-size: x-large;
   color: rgba(50, 205, 50, 0.845);
 }
@@ -468,16 +407,22 @@ ul p {
 #cartMainDiv {
   display: flex;
 }
+#container{
+
+  background-color:transparent;
+}
+
 #container table {
   border-bottom: 2px solid var(--main-color);
   margin: 1% 0.1%;
   padding: 1%;
-
+  
 }
 
 #container th {
   padding: 0%;
   width: 10%;
+  background-color:transparent;
 }
 
 #container .img {
@@ -502,21 +447,29 @@ ul p {
 }
 
 #remove{
-  width: 60%;
+  width:30%;
   height: 30px;
   font-size: 1.3em;
-  color: var(--primary-color);
-  background-color: var(--main-color);
+  color: var(--secondary-color);
+  background-color: transparent;
   border-radius: 9px;
+}
+
+#remove:hover{
+  background-color: var(--main-color);
+  color: var(--primary-color);
+  border: 3px solid var(--secondary-color);
 }
 
 #add-remove-btn #count{
   /* width: 100%; */
   font-size:1em;
   font-weight: bold;
+  opacity: 0.9;
 }
 
 #add-remove-btn button{
+  opacity: 0.5;
   width: 20%;
   height: 25px;
   text-align: center;
@@ -525,6 +478,13 @@ ul p {
   background-color: var(--main-color);
   border-radius: 9px;
  }
+
+ #add-remove-btn button:hover{
+  opacity: 1;
+ }
+
+
+
 
 
 
@@ -538,9 +498,16 @@ ul p {
   margin: 3% 0;
 }
 
+#checkOutDiv{
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 0;
+  font-size: xx-small;
+}
+
 .checkout-container {
   background: white;
-  padding: 20px;
+  padding: 1% 2% 0;
   margin: 8% 25% 0;
   border: 3px solid var(--main-color);
   border-radius: 10px;
@@ -578,9 +545,15 @@ label {
   margin-top: 2%;
 }
 
+#checkOutRuppe{
+  font-size: x-large;
+  font-family: 'Times New Roman' ;
+  font-weight: bold;
+}
+
 .checkbtn {
   width: 30%;
-  padding: 10px;
+  padding: 2px ;
   margin: 1% 35%;
   margin-bottom: 0%;
   /* border: none; */
