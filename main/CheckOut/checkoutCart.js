@@ -69,20 +69,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
             Swal.fire({
-                position: "center",
-                icon: "success",
                 title: "Order placed successfully with Credit Card!",
-                showConfirmButton: false,
-                timer: 2000
-              });
+                icon: "success",
+                confirmButtonText: "Back to Home",
+                showButton: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = "../../main/Home/home.html"
+
+                }
+            })
+            
         } else {
             Swal.fire({
-                position: "center",
-                icon: "success",
                 title: "Order placed successfully with Cash on Delivery!",
-                showConfirmButton: false,
-                timer: 2000
-              });
+                confirmButtonText: "Back to Home",
+                showButton: true,
+                icon: "success",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = "../../main/Home/home.html"
+
+                }
+            })
+
         }
     });
 

@@ -79,12 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 }
             })
-            // Swal.fire({
-            //     position: "center",
-            //     icon: "success",
-            //     showConfirmButton: false,
-            //     timer: 2000
-            //   });
+            
         } else {
             Swal.fire({
                 title: "Order placed successfully with Cash on Delivery!",
