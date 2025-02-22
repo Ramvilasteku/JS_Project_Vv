@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 showButton: true
             }).then((result) => {
                 if (result.isConfirmed) {
-                    location.href = "../main/Home/home.html"
+                    location.href = "../../main/Home/home.html"
 
                 }
             })
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon: "success",
             }).then((result) => {
                 if (result.isConfirmed) {
-                    location.href = "../main/Home/home.html"
+                    location.href = "../../main/Home/home.html"
 
                 }
             })
