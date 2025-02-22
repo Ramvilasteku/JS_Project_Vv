@@ -119,7 +119,7 @@ img {
   font-size: 2rem;
   text-transform: capitalize;
   text-align: center;
-  padding: 8%;
+  padding: 8% ;
   padding-bottom: 0%;
   font-weight: 600;
   color: var(--main-color);
@@ -441,6 +441,10 @@ img {
     width: 80%;
     height: 40vh;
   }
+  
+  #landBottomDiv {
+    margin: 5% 5%;
+  }
 
   .content .heading {
     font-size: 3rem;
@@ -473,6 +477,11 @@ img {
     flex-wrap: wrap;
     gap: 3%;
   }
+
+  
+  .card{
+    margin-top: 4%;
+  } 
 
   .help input {
     width: 60%;
@@ -508,7 +517,7 @@ img {
 
   #landBottomDiv {
     font-size: 1.5rem;
-    padding: 10%;
+    padding: 2% 5%;
   }
 
   .content .heading {
@@ -545,9 +554,12 @@ img {
   .rev {
     flex-direction: column;
     align-items: center;
-    gap: 10%;
+    gap: 100%;
   }
 
+  .card{
+    margin-top: 4%;
+  } 
   .help input {
     width: 50%;
     margin-left: 0%;
@@ -583,6 +595,89 @@ img {
   .license {
     padding: 3%; /* Adjust padding for mobile */
   }
+
+
+
+  /* animation for Review */
+
+
+  @keyframes grow {
+    0% {
+      max-height: var(--lineHeight);
+    }
+    100% {
+      max-height: calc(var(--lineHeight) * var(--lines));
+    }
+  }
+  
+  @keyframes carriageReturn {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: calc(var(--lineHeight) * var(--lines));
+    }
+  }
+  
+  @keyframes type {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  
+  @keyframes caret {
+    0% {
+      color: var(--bgColor);
+    }
+    100% {
+      color: black;
+    }
+  }
+  
+  .typewriter {
+    --bgColor: var(--primary-color);
+    --lines: 500;
+    --lineHeight: 2rem;
+    --timePerLine: 1.5s;
+    --widthCh: 80;
+    --width: calc(var(--widthCh) * 1ch);
+    /* do not touch the time property!!! */
+    --time: calc(var(--lines) * var(--timePerLine));
+    animation: grow var(--time) steps(var(--lines));
+    animation-fill-mode: forwards;
+    background: var(--bgColor);
+    line-height: var(--lineHeight);
+    max-height: var(--lineHeight);
+    overflow: hidden;
+    position: relative;
+    /* width: var(--width); */
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: type var(--timePerLine) linear infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
+      caret 0.5s steps(2) infinite;
+    background: var(--main-bg-color);
+    border-left: 2px solid var(--main-color);
+    right: 0;
+    border-radius: 2px;
+    bottom: 0;
+    height: 2.5rem;
+    position: absolute;
+    width: 100%;
+  }
+  .typewriter.monospace::before {
+    animation: type var(--timePerLine) steps(var(--widthCh)) infinite,
+      carriageReturn var(--time) steps(var(--lines)) var(--lines),
+      caret 0.5s steps(2) infinite;
+  }
+  
+
+
 }
 
 
