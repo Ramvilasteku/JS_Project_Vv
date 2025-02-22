@@ -1,4 +1,8 @@
-* {
+
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* * {
   padding: 0;
   margin: 0;
   font-family:'Almendra', serif;
@@ -22,7 +26,7 @@
   width: 30%;
   height: 20%;
   position: relative;
-  z-index: 9; /* Ensure image stays behind text */
+  z-index: 9;
 }
 .bg-text {
   background-color: rgb(255, 255, 255);
@@ -69,7 +73,7 @@ color: var(--primary-color);
     width: 100%;
     height: 60%;
     position: relative;
-    z-index: 9; /* Ensure image stays behind text */
+    z-index: 9; 
   }
 
   .bg-text {
@@ -106,12 +110,121 @@ color: var(--primary-color);
 }
 
 
-
-
-
-
-
-
-
-/* 
  */
+
+
+ * {
+  padding: 0;
+  margin: 0;
+  font-family:'Almendra', serif;
+}
+
+
+:root {
+  --main-bg-color: #6096fd;
+  --main-color: #031b88;
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+}
+
+.landimg img {
+  width: 100%;
+  height: 99.9vh;
+  opacity: 0.7;
+}
+
+#navDiv .img {
+  width: 30%;
+  height: 20%;
+  position: relative;
+  z-index: 9; /* Ensure image stays behind text */
+}
+
+.bg-text {
+  background-color: #ffffff84;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+.bg-text h1{
+   margin-top: 10px;
+}
+
+.bg-text p{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#navbar button {
+  background-color: var(--main-color);
+  margin: 6px;
+  font-weight: 700;
+}
+
+#skipLogin a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* Tablet View */
+@media only screen and (max-width: 1024px) {
+  #navDiv .img {
+    width: 50%;
+    height: auto;
+  }
+  .bg-text {
+    left: 50%;
+    width: 60%;
+    padding: 15px;
+  }
+  .bg-text h1 {
+    font-size: 28px;
+  }
+  .bg-text p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile View */
+@media only screen and (max-width: 600px) {
+
+
+  body{
+  background-image: url(https://img.freepik.com/free-photo/background-blue-recycled-paper_1253-84.jpg?semt=ais_hybrid);
+
+  }
+  
+.landimg img {
+  display: none;
+}
+
+  #navDiv .img {
+    width: 80%;
+    height: auto;
+  }
+  .bg-text {
+    width: 90%;
+    padding: 10px;
+    left: 50%;
+    top: 55%;
+  }
+  .bg-text h1 {
+    font-size: 22px;
+  }
+  .bg-text p {
+    font-size: 14px;
+  }
+  .landimg img {
+    height: auto;
+  }
+}

@@ -92,13 +92,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let card1 = document.getElementById("chechOutAmt");
     card1.className = "chechOutAmt"
     card1.innerHTML = `
-    
+    <div >
     <p id='singleTitle'>${singleP.title}</p>
      <span id='singleRuppe'>
      <i class="fa fa-rupee"></i>
       ${singleP.price}
-     </span>`
-
+     </span
+     </div>`
 
 
 });

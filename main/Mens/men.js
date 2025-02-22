@@ -37,24 +37,26 @@ const apiURL = 'https://api-data-ggsb.onrender.com/Mens'
 let allData = document.getElementById("data");
 
 let allProduct = document.getElementById('btn');
-let Footwear = document.getElementById('Footwear');
-let Jewellery = document.getElementById('Jewellery');
-let Stoles = document.getElementById('Stoles');
+let Footwear = document.getElementById('Angarkhas-Bandhgalas');
+let Jewellery = document.getElementById('Dhotis');
+let Stoles = document.getElementById('Kurta-Pajama');
+let Sherwanis = document.getElementById('Sherwanis');
 
-Footwear.addEventListener("click", () => getData("Footwear"));
-Jewellery.addEventListener("click", () => getData("Jewellery"));
-Stoles.addEventListener("click", () => getData("Stoles"));
+Footwear.addEventListener("click", () => getData("Angarkhas-Bandhgalas"));
+Jewellery.addEventListener("click", () => getData("Dhotis"));
+Stoles.addEventListener("click", () => getData("Kurta-Pajama"));
+Sherwanis.addEventListener("click", () => getData("Sherwanis"));
 allProduct.addEventListener("click", ()=>getData(""))
 
 
 
-async function getData(subcategory = null) {
+async function getData(category = null) {
   const data = await fetch(apiURL);
   const res = await data.json();
 
   allData.innerHTML = "";
 
-  const filteredData = subcategory ? res.filter((x) => x.subcategory === subcategory) : res;
+  const filteredData = category ? res.filter((x) => x.category === category) : res;
 
   if (filteredData == 0) {
     allData.innerHTML = "no data found";
@@ -100,33 +102,7 @@ async function getData(subcategory = null) {
         cartItems.push(x);
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
       });
-      card.querySelector("#buyNow").addEventListener("click", (e) => {
-        e.stopPropagation();
-        let timerInterval;
-        Swal.fire({
-          title: "Redirecting to cart page",
-          html: "I will navigate in <b></b> milliseconds.",
-          timer: 1000,
-          timerProgressBar: true,
-          didOpen: () => {
-            Swal.showLoading();
-            const timer = Swal.getPopup().querySelector("b");
-            timerInterval = setInterval(() => {
-              timer.textContent = `${Swal.getTimerLeft()}`;
-            }, 100);
-          },
-          willClose: () => {
-            clearInterval(timerInterval);
-          }
-        }).then((result) => {
-          /* Read more about handling dismissals below */
-          if (result.dismiss === Swal.DismissReason.timer) {
-            console.log("I was closed by the timer");
-            location.href = "../../main/Product/cartpage.html"
-          }
-        });
 
-      });
     });
   }
 }

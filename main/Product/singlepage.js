@@ -12,10 +12,9 @@ card1.innerHTML = `
          <span id='singleRuppe'>
          <i class="fa fa-rupee"></i>
           ${singleP.price}
-         </span>
-         <div id='add-Buy-Btn'>
-           <button id="singleBuyNow">Buy Now</button>
-           <button id="singleAddCart">Add To Cart</button>
+          </span>
+          <div id='add-Buy-Btn'>
+          <button id="singleBuyNow">Buy Now</button>
 </div>
 `;
 document.body.append(card1);

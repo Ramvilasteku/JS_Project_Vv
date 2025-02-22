@@ -14,7 +14,6 @@
 
 body {
   background-image: url(https://img.freepik.com/free-photo/background-blue-recycled-paper_1253-84.jpg?semt=ais_hybrid);
-  /* background-image:url(https://img.freepik.com/free-vector/blue-watercolor-fluid-painting-design-card1-dye-splash-style-alcohol-ink_41066-1372.jpg); */
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -238,18 +237,77 @@ border-bottom-left-radius: 9%; */
   transition: all ease-in-out 0.3s;
 }
 
-#buyNow a {
+#buyNow{
   text-decoration: none;
   color: var(--main-color);
 }
 
-#buyNow a:hover {
+#buyNow :hover {
   color: var(--primary-color);
   background-color: var(--main-color);
   border-right: 2px solid var(--primary-color);
 }
 
 /* footer */
+
+
+.help {
+  /* height: 45vh; */
+  background-color: var(--main-bg-color);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+.social .bx {
+  font-size: 300%;
+  padding: 0.5%;
+  margin: 0.5%;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  color: var(--color);
+  cursor: pointer;
+}
+
+.social .bx:hover {
+  background-color: var(--main-color);
+}
+
+.helpc {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.helpc .cell {
+  font-size: 100%;
+  color: var(--primary-color);
+}
+
+.cell:hover {
+  color: var(--main-color);
+}
+
+.helpc .bx {
+  font-size: 200%;
+  color: var(--primary-color);
+}
+
+.help input {
+  width: 40%;
+  margin-top: 2%;
+  margin-left: 30%;
+}
+
+.license {
+  height: 6vh;
+  background-color: var(--main-bg-color);
+  border-top: 3px double var(--primary-color);
+  text-align: center;
+  padding: 0.5%;
+}
 
 .low {
   display: flex;
@@ -411,7 +469,7 @@ ul p {
   display: flex;
 }
 #container table {
-  border: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
   margin: 1% 0.1%;
   padding: 1%;
 
@@ -521,9 +579,9 @@ label {
 }
 
 .checkbtn {
-  width: 50%;
+  width: 30%;
   padding: 10px;
-  margin: 0% 25%;
+  margin: 1% 35%;
   margin-bottom: 0%;
   /* border: none; */
   color: var(--main-color);

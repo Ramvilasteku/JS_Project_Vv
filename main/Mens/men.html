@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VastraVilas</title>
+
   <link rel="stylesheet" href="../style.css" />
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -17,59 +19,60 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.csccs" rel="stylesheet" />
 
 </head>
 
 <body>
   <!-- Landing Page -->
-    <div id="navDiv">
-      <!-- Nav Links -->
-      <nav class="navbar navbar-expand-lg " id="navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="../../image/Vastra Vilas Logo.png" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler"><i class="bi bi-three-dots-vertical"></i></span>
-          </button>
-          <div class="collapse navbar-collapse  text-bg-light" id="navbarNav">
-            <ul class="navbar-nav center">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
-              </li>
-              <li class="nav-item" id="menBtn">
-                <a class="nav-link">MEN'S</a>
-              </li>
-              <li class="nav-item" id="womenBtn">
-                <a class="nav-link">WOMEN'S</a>
-              </li>
-              <li class="nav-item" id="kidBtn">
-                <a class="nav-link">KID'S</a>
-              </li>
-              <li class="nav-item" id="accessBtn">
-                <a class="nav-link">ACCESSORIES</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav end">
-              <div class="icons">
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-person-circle"></i>
-                  </a>
+  <div id="navDiv">
+    <!-- Nav Links -->
+    <nav class="navbar navbar-expand-lg " id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="../../image/Vastra Vilas Logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler"><i class="bi bi-three-dots-vertical"></i></span>
+        </button>
+        <div class="collapse navbar-collapse  text-bg-light" id="navbarNav">
+          <ul class="navbar-nav center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item" id="menBtn">
+              <a class="nav-link">MEN'S</a>
+            </li>
+            <li class="nav-item" id="womenBtn">
+              <a class="nav-link">WOMEN'S</a>
+            </li>
+            <li class="nav-item" id="kidBtn">
+              <a class="nav-link">KID'S</a>
+            </li>
+            <li class="nav-item" id="accessBtn">
+              <a class="nav-link">ACCESSORIES</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav end">
+            <div class="icons">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-person-circle"></i>
+                </a>
 
-                  <ul class="dropdown-menu">
-                    
-                    <li><a class="iconText" href="../../index.html">Logout</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../Product/cartpage.html"><i class="bi bi-cart2"></i></a>
-                </li>
-              </div>
-            </ul>
-          </div>
+                <ul class="dropdown-menu">
+
+                  <li><a class="iconText" href="../../index.html">Logout</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Product/cartpage.html"><i class="bi bi-cart2"></i></a>
+              </li>
+            </div>
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
+  </div>
 
 
   <div id="mainDiv">
@@ -101,25 +104,24 @@
     </div>
 
     <button type="button" class="btn btn-primary " id="btn">All Products</button>
-    <button type="button" class="btn btn-primary" id="Footwear">Footwear</button>
-    <button type="button" class="btn btn-primary" id="Jewellery">Jewellery</button>
-    <button type="button" class="btn btn-primary" id="Stoles">Stoles</button>
-    
+    <button type="button" class="btn btn-primary" id="Angarkhas-Bandhgalas">Angarkhas-Bandhgalas</button>
+    <button type="button" class="btn btn-primary" id="Dhotis">Dhotis</button>
+    <button type="button" class="btn btn-primary" id="Kurta-Pajama">Kurta-Pajama</button>
+    <button type="button" class="btn btn-primary" id="Sherwanis">Sherwanis</button>
 
-    <div id="data" ></div>
+    <div id="data"></div>
 
 
+    <!-- Footer section -->
 
-      <!-- Footer section -->
-
-  <footer class="low1">
+    <!-- <footer class="low1">
     <div class="foot-1">
       <ul>
         <p>Stay Updated </p>
-        <!-- <a> Sign up with your email address to receive news and updates.</a> -->
+        <a> Sign up with your email address to receive news and updates.</a> 
       </ul>
     </div>
-    <!-- <div class="foot-2">
+    <div class="foot-2">
         <ul>
           <p> Info</p>
           <a>Home </a>
@@ -128,7 +130,7 @@
           <a>Gallery</a>
 
         </ul>
-      </div> -->
+      </div> 
     <div class="foot-3">
       <ul>
         <p>Follow Us</p>
@@ -144,24 +146,51 @@
         <a>123456789</a>
       </ul>
     </div>
-  </footer>
+   </footer> -->
+
+    <footer>
+      <div class="help">
+        <div class="social">
+          <i class="bx bxl-facebook"></i>
+          <i class="bx bxl-twitter"></i>
+          <i class="bx bxl-linkedin"></i>
+          <i class="bx bxl-instagram-alt"></i>
+        </div>
+        <div class="helpc">
+          <i class="bx bxs-phone-call"></i>
+          <span class="cell">+01 1234567890</span>
+          <i class="bx bxs-envelope"></i>
+          <span class="cell">vastravilas@gmail.com</span>
+        </div>
+        <input type="email" name="name" placeholder="Your Email" />
+      </div>
+      <div class="license">
+        <p>
+          2024 All Rights Reserved. Design by Free Html Templates Distribution
+          by 10000 Coders
+        </p>
+      </div>
+    </footer>
 
 
-  <script src="men.js"></script>
-  <!-- Bootstrap links -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <script src="men.js"></script>
+    <!-- Bootstrap links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
 
-  <!-- AOC link -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- AOC link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-  </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
 </body>
 
 </html>

@@ -82,7 +82,7 @@ async function getData(subcategory = null) {
       });
       card.querySelector("#addCart").addEventListener("click", (e) => {
         e.stopPropagation();
-        // Swal.fire('Good job!', 'item added to the cart!', 'success');
+        Swal.fire('Good job!', 'item added to the cart!', 'success');
         Swal.fire({
           title: `${x.title}`,
           text: `${x.price}`,
