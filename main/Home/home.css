@@ -87,17 +87,17 @@ img {
   border-bottom: 2px solid var(--main-color);
 }
 
-#dropdown-menu{
+#dropdown-menu {
   color: var(--secondary-color);
   height: 6vh;
-padding: 0;
-  margin:  0%;
+  padding: 0;
+  margin: 0%;
   text-align: center;
   /* background-color: transparent; */
 }
 
 .dropdown li .iconText {
-  max-width:5px;
+  max-width: 5px;
   color: var(--main-color);
 }
 
@@ -108,7 +108,6 @@ padding: 0;
 }
 
 /* Landig Banner */
-
 
 #landTopDiv .slide {
   margin: 1% 21%;
@@ -130,7 +129,6 @@ padding: 0;
   border-radius: 20px;
   width: auto;
   height: auto;
-
 }
 
 /* Landing Banner END */
@@ -157,7 +155,6 @@ padding: 0;
 }
 
 .container {
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -236,7 +233,6 @@ padding: 0;
 }
 
 /* Section Div END */
-
 
 /* About section */
 
@@ -362,7 +358,6 @@ padding: 0;
 /* footer */
 /* footer */
 
-
 .help {
   /* height: 45vh; */
   background-color: var(--main-bg-color);
@@ -386,8 +381,8 @@ padding: 0;
 }
 
 .social .bx:hover {
-color: var(--main-color);
-border: 3px double var(--main-color);
+  color: var(--main-color);
+  border: 3px double var(--main-color);
 }
 
 .helpc {
@@ -409,10 +404,9 @@ border: 3px double var(--main-color);
 .helpc .bx {
   font-size: 199%;
   padding: 0%;
-  margin:0%;
+  margin: 0%;
   color: var(--primary-color);
 }
-
 
 .help input {
   width: 40%;
@@ -429,14 +423,6 @@ border: 3px double var(--main-color);
 }
 
 /* Footer END */
-
-
-
-
-
-
-
-
 
 /* Responsive Styles */
 
@@ -461,10 +447,15 @@ border: 3px double var(--main-color);
     justify-content: center;
     text-align: center;
   }
-
+  
   .container {
     grid-template-columns: 1fr;
     padding: 5%;
+  }
+  
+  .content {
+    text-align: center;
+    order: 1; /* Content first */
   }
 
   .image,
@@ -487,7 +478,6 @@ border: 3px double var(--main-color);
     width: 60%;
     margin-left: 20%;
   }
-
 }
 
 /* Mobile (Up to 767px) */
@@ -526,16 +516,23 @@ border: 3px double var(--main-color);
     text-align: center;
   }
 
+
   .container {
-    display: block;
+    display: flex;
+    flex-direction: column; /* Stack content first, then image */
     text-align: center;
-    padding: 10%;
+  }
+  
+  .content {
+    text-align: center; 
+    order: 1; 
   }
 
   .image,
   .image1 {
     display: flex;
     justify-content: center;
+    order: 2; /* Image second */
   }
 
   .image img,
@@ -544,6 +541,7 @@ border: 3px double var(--main-color);
     height: auto;
   }
 
+
   .rev {
     flex-direction: column;
     align-items: center;
@@ -551,13 +549,40 @@ border: 3px double var(--main-color);
   }
 
   .help input {
-    width: 80%;
-    margin-left: 10%;
+    width: 50%;
+    margin-left: 0%;
   }
 
-  
   .review {
-
+    font-weight: 600;
     font-size: 2rem;
   }
+
+  .help {
+    padding: 8%; /* Increase footer padding */
+  }
+
+  .social {
+    padding: 3%; /* Add spacing around social icons */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .helpc {
+    padding: 3%;
+    flex-direction: column; /* Stack elements */
+    align-items: center;
+    text-align: center;
+  }
+
+  .help input {
+     width: 100%; /*Make input field full width */
+  }
+
+  .license {
+    padding: 3%; /* Adjust padding for mobile */
+  }
 }
+
+
