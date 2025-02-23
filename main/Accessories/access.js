@@ -33,15 +33,15 @@ const apiURL = 'https://api-data-ggsb.onrender.com/Accessories'
 
 let allData = document.getElementById("data");
 
-let allProduct = document.getElementById('btn');
-let Footwear = document.getElementById('Footwear');
-let Jewellery = document.getElementById('Jewellery');
-let Stoles = document.getElementById('Stoles');
+// let allProduct = document.getElementById('btn');
+// let Footwear = document.getElementById('Footwear');
+// let Jewellery = document.getElementById('Jewellery');
+// let Stoles = document.getElementById('Stoles');
 
-Footwear.addEventListener("click", () => getData("Footwear"));
-Jewellery.addEventListener("click", () => getData("Jewellery"));
-Stoles.addEventListener("click", () => getData("Stoles"));
-allProduct.addEventListener("click", ()=>getData(""))
+// Footwear.addEventListener("click", () => getData("Footwear"));
+// Jewellery.addEventListener("click", () => getData("Jewellery"));
+// Stoles.addEventListener("click", () => getData("Stoles"));
+// allProduct.addEventListener("click", ()=>getData(""))
 
 
 

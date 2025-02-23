@@ -36,17 +36,17 @@ const apiURL = 'https://api-data-ggsb.onrender.com/Mens'
 
 let allData = document.getElementById("data");
 
-let allProduct = document.getElementById('btn');
-let Footwear = document.getElementById('Angarkhas-Bandhgalas');
-let Jewellery = document.getElementById('Dhotis');
-let Stoles = document.getElementById('Kurta-Pajama');
-let Sherwanis = document.getElementById('Sherwanis');
+// let allProduct = document.getElementById('btn');
+// let Footwear = document.getElementById('Angarkhas-Bandhgalas');
+// let Jewellery = document.getElementById('Dhotis');
+// let Stoles = document.getElementById('Kurta-Pajama');
+// let Sherwanis = document.getElementById('Sherwanis');
 
-Footwear.addEventListener("click", () => getData("Angarkhas-Bandhgalas"));
-Jewellery.addEventListener("click", () => getData("Dhotis"));
-Stoles.addEventListener("click", () => getData("Kurta-Pajama"));
-Sherwanis.addEventListener("click", () => getData("Sherwanis"));
-allProduct.addEventListener("click", ()=>getData(""))
+// Footwear.addEventListener("click", () => getData("Angarkhas-Bandhgalas"));
+// Jewellery.addEventListener("click", () => getData("Dhotis"));
+// Stoles.addEventListener("click", () => getData("Kurta-Pajama"));
+// Sherwanis.addEventListener("click", () => getData("Sherwanis"));
+// allProduct.addEventListener("click", ()=>getData(""))
 
 
 

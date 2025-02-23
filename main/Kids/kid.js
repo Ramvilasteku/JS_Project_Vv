@@ -35,14 +35,13 @@ const apiURL = 'https://api-data-ggsb.onrender.com/Kids'
 
 let allData = document.getElementById("data");
 
-let allProduct = document.getElementById('btn');
-let Footwear = document.getElementById('Boys');
-let Jewellery = document.getElementById('Girls');
-// let Stoles = document.getElementById('Stoles');
+// let allProduct = document.getElementById('btn');
+// let Footwear = document.getElementById('Boys');
+// let Jewellery = document.getElementById('Girls');
 
-Footwear.addEventListener("click", () => getData("boys"));
-Jewellery.addEventListener("click", () => getData("girls"));
-allProduct.addEventListener("click", ()=>getData(""))
+// Footwear.addEventListener("click", () => getData("boys"));
+// Jewellery.addEventListener("click", () => getData("girls"));
+// allProduct.addEventListener("click", ()=>getData(""))
 
 
 

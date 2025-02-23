@@ -125,7 +125,7 @@ border-bottom-left-radius: 9%; */
   font-size: 2rem;
   text-transform: capitalize;
   text-align: center;
-  padding: 9%;
+  padding: 9% 10% 0;
   font-weight: 600;
   color: var(--main-color);
 }
@@ -144,6 +144,7 @@ border-bottom-left-radius: 9%; */
   justify-content: center;
   align-items: center;
   gap: 3%;
+  margin-top: 0%;
   padding: 1%;
 }
 
