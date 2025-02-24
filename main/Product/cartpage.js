@@ -33,6 +33,7 @@ buyNow.addEventListener("click", (e) => {
   e.preventDefault();
   location.href = "../../main/CheckOut/checkoutCart.html";
 });
+
 let allData = document.getElementById("container");
 document.addEventListener("DOMContentLoaded", () => {
   let allItems = JSON.parse(localStorage.getItem("cartItems"));
@@ -47,27 +48,25 @@ document.addEventListener("DOMContentLoaded", () => {
   allItems.forEach((x, index) => {
     let card = document.createElement("div");
     // card.className = "card";
-    card.classList.add("cartCard");
+    card.classList.add("card1");
     card.innerHTML = `
-  <div id="container">
-    <table width="100%">
-        <tr>
-            <th><img src=${x.image} alt="image" class="img"/></th>
-            <th><p>${x.title}</p></th>
-               <th ><span id='cartRuppe'><i class="fa fa-rupee"></i>
-           ${x.price}</span></th>
-    
-            <th>
-            <div id='add-remove-btn'> 
+
+     <img src=${x.image} alt="image" width="300" class="img"/>
+             <div id='main-card'>
+             <p>${x.title}</p>
+             <div id='p-icon'>
+             <i class="fa fa-rupee"></i>
+             ${x.price}
+             </div>
+             <div id='add-remove-btn'> 
             <button id="dec"><i class="fa fa-minus"></i></button>
             <button id="count">${x.count}</button>
             <button id="inc"><i class="fa fa-plus"></i></button>
+            <button id="remove">Remove</button>
             </div>
-            </th>
-            <th> <button id="remove">Remove</button></th>
-        </tr>
-    </table>
-</div>
+            </div>
+    
+
   
      `;
     allData.append(card);
